@@ -1,9 +1,25 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
 
 </head>
-<body>
+<body ng-app='routingApp' ng-controller='mainCtrl'>
+
+	<nav>Routing App at the <strong>{{route}}</strong> route || <a href='#/'>Home</a> <a href='#/test'>Test</a> <a href='#/items/test'>Item</a></nav>
+
+	<ng-view></ng-view>
+
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.13/angular.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.13/angular-route.min.js'></script>
+
+	<script type="text/javascript" src='app/app.js'></script>
+
+	<script src='app/services/item-service.js'></script>
+
+	<script src='app/main-control.js'></script>
+	<script src='app/templates/home/home-control.js'></script>
+	<script src='app/templates/test/test-control.js'></script>
+	<script src='app/templates/item/item-control.js'></script>
 
 </body>
 </html>
